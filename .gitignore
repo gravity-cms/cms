@@ -9,3 +9,14 @@
 /build/
 /vendor/
 /composer.phar
+
+/src/
+
+/web/css/*
+/web/img/*
+/web/js/*
+/web/vendor
+!web/js/common.js
+app/Resources/FOSUserBundle/
+
+.idea
