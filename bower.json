@@ -1,0 +1,38 @@
+{
+  "name": "gravity-cms",
+  "description": "Gravity CMS",
+  "version": "1.0.0",
+  "authors": [
+    "Andy Thorne <contrabandvr@gmail.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "bootstrap": ">= 3.0.0",
+    "jquery-ui": ">= 1.10.0",
+    "ckeditor": "~4.3.5",
+    "PBCKCode": "https://github.com/andythorne/pbckcode.git#master",
+    "ckeditor-youtube-plugin": "https://github.com/fonini/ckeditor-youtube-plugin.git#master",
+    "ace": "~1.1",
+    "font-awesome": ">= 4.0.0",
+    "select2": ">= 3.4.0",
+    "dropzone": ">= 3.8.0",
+    "typeahead.js": ">= 0.10.0",
+    "requirejs": "~2.1.11",
+    "requirejs-domready": "~2.0.1",
+    "sass-bootstrap": "~3.0.2",
+    "highlightjs": "~8.0",
+    "jstree": "~3.0",
+    "bootbox": "4.2.0",
+    "angular": "~1.3.0",
+    "datatables": "1.10.*",
+    "datatables-bootstrap3": "*"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
