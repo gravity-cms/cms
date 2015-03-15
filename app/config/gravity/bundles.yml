@@ -1,0 +1,6 @@
+bundles:
+  - GravityCMS\NodeBundle\GravityCMSNodeBundle
+  - Gravity\CKEditorBundle\GravityCKEditorBundle
+  - Gravity\TagBundle\GravityTagBundle
+#  - GravityCMS\EditorCKE\EditorCKEModule
+#  - GravityCMS\FieldTag\FieldTagModule
