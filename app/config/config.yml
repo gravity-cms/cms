@@ -37,6 +37,7 @@ twig:
     form_themes:
       - bootstrap_3_horizontal_layout.html.twig
       - GravityCMSCoreBundle:Form:fields.html.twig
+      - GravityFileBundle:Form:fields.html.twig
     globals:
        gravity_menu_manager: @gravity_cms.menu_manager
 
@@ -47,12 +48,18 @@ assetic:
     bundles:
       - GravityCMSCoreBundle
       - FOSUserBundle
-    # java: /usr/bin/java
+      - GravityFileBundle
     filters:
       cssrewrite: ~
-      sass:    ~
-      uglifyjs2: ~
+      uglifyjs2:
+        bin: %kernel.root_dir%/../node_modules/.bin/uglifyjs
+      jsx:
+        bin: %kernel.root_dir%/../node_modules/.bin/jsx
+        resource: %kernel.root_dir%/Resources/AsseticBundle/config/filters/jsx.xml
+      sass:
+        bin: %kernel.root_dir%/../bin/sass
       compass:
+        bin: %kernel.root_dir%/../bin/compass
         load_paths:
           - %kernel.root_dir%/../web/
           - %kernel.root_dir%/..

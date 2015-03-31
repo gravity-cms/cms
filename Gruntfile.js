@@ -1,7 +1,7 @@
 module.exports = function(grunt){
     grunt.initConfig({
         nodeRequire: require,
-        appDir: 'web/assets-dev',
+        appDir: 'web',
         builtDir: 'web/assets',
         requirejs: {
             main: {
