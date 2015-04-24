@@ -1,13 +1,17 @@
+gravity_file:
+    resource: "@GravityFileBundle/Resources/config/routing.yml"
+    prefix:   /
+
 gravity_tag:
     resource: "@GravityTagBundle/Resources/config/routing.yml"
     prefix:   /
 
-gravity_cms_core:
-    resource: "@GravityCMSCoreBundle/Resources/config/routing.yml"
+gravity_node:
+    resource: "@GravityNodeBundle/Resources/config/routing.yml"
     prefix:   /
 
-gravity_node:
-    resource: "@GravityCMSNodeBundle/Resources/config/routing.yml"
+gravity_cms_core:
+    resource: "@GravityCMSCoreBundle/Resources/config/routing.yml"
     prefix:   /
 
 # app/config/routing.yml
@@ -29,3 +33,6 @@ fos_user_resetting:
 fos_user_change_password:
     resource: "@FOSUserBundle/Resources/config/routing/change_password.xml"
     prefix: /profile
+
+_liip_imagine:
+    resource: "@LiipImagineBundle/Resources/config/routing.xml"

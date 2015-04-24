@@ -53,9 +53,6 @@ assetic:
       cssrewrite: ~
       uglifyjs2:
         bin: %kernel.root_dir%/../node_modules/.bin/uglifyjs
-      jsx:
-        bin: %kernel.root_dir%/../node_modules/.bin/jsx
-        resource: %kernel.root_dir%/Resources/AsseticBundle/config/filters/jsx.xml
       sass:
         bin: %kernel.root_dir%/../bin/sass
       compass:
@@ -144,3 +141,52 @@ gravity_cms_core:
   default_editor: ckeditor
   cms:
     admin_path: %gravity_cms.admin_path%
+
+gravity_file:
+  styles: ~
+
+liip_imagine:
+    loaders:
+        default:
+            stream:
+                wrapper: gravity://%gravity_default_filesystem%/
+#    resolvers:
+#       default:
+#          web_path:
+#            web_root: "gravity://%gravity_default_filesystem%/"
+    cache: stream
+    filter_sets:
+        thumbnail:
+            quality: 75
+            filters:
+                thumbnail: { size: [120, 90], mode: outbound }
+        medium:
+            quality: 75
+            filters:
+                relative_resize: { widen: 480 }
+        large:
+            quality: 90
+            filters:
+                relative_resize: { widen: 1024 }
+
+# gaufrette bundle
+knp_gaufrette:
+    adapters:
+        public:
+            local:
+                directory:  %kernel.root_dir%/../web/files
+                create:     true
+
+    filesystems:
+        public:
+            adapter:        public
+
+    stream_wrapper:
+        protocol: gravity
+
+# gaufrette extras
+k_phoen_gaufrette_extras:
+    resolvers:
+        public:                 # the filesystem name
+            prefix:             # the resolver to use
+                path: /files    # and its configuration

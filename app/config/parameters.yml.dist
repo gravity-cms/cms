@@ -21,3 +21,5 @@ parameters:
 
     # Gravity Settings
     gravity_cms.admin_path: /admin/cms
+    gravity_default_filesystem: public
+

@@ -24,6 +24,11 @@ class AppKernel extends Kernel
             new Doctrine\Bundle\DoctrineCacheBundle\DoctrineCacheBundle(),
             new Symfony\Cmf\Bundle\RoutingBundle\CmfRoutingBundle(),
 
+            // file systems
+            new Knp\Bundle\GaufretteBundle\KnpGaufretteBundle(),
+            new KPhoen\GaufretteExtrasBundle\KPhoenGaufretteExtrasBundle(),
+            new Liip\ImagineBundle\LiipImagineBundle(),
+
             new GravityCMS\CoreBundle\GravityCMSCoreBundle(),
         ];
 

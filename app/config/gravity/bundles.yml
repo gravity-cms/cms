@@ -2,3 +2,4 @@ bundles:
   - Gravity\NodeBundle\GravityNodeBundle
   - Gravity\CKEditorBundle\GravityCKEditorBundle
   - Gravity\TagBundle\GravityTagBundle
+  - Gravity\FileBundle\GravityFileBundle
