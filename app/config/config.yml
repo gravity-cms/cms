@@ -143,7 +143,13 @@ gravity_cms_core:
     admin_path: %gravity_cms.admin_path%
 
 gravity_file:
-  styles: ~
+  filesystem: public
+  extensions:
+    - png
+    - jpg
+    - jpeg
+    - gif
+    - txt
 
 liip_imagine:
     loaders:
