@@ -29,7 +29,7 @@ class AppKernel extends Kernel
             new KPhoen\GaufretteExtrasBundle\KPhoenGaufretteExtrasBundle(),
             new Liip\ImagineBundle\LiipImagineBundle(),
 
-            new GravityCMS\CoreBundle\GravityCMSCoreBundle(),
+            new Gravity\CoreBundle\GravityCoreBundle(),
         ];
 
         $this->registerGravityBundles($bundles);

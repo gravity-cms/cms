@@ -36,7 +36,7 @@ twig:
     strict_variables: "%kernel.debug%"
     form_themes:
       - bootstrap_3_horizontal_layout.html.twig
-      - GravityCMSCoreBundle:Form:fields.html.twig
+      - GravityCoreBundle:Form:fields.html.twig
       - GravityFileBundle:Form:fields.html.twig
     globals:
        gravity_menu_manager: @gravity_cms.menu_manager
@@ -46,7 +46,7 @@ assetic:
     debug:          "%kernel.debug%"
     use_controller: false
     bundles:
-      - GravityCMSCoreBundle
+      - GravityCoreBundle
       - FOSUserBundle
       - GravityFileBundle
     filters:
@@ -101,10 +101,10 @@ swiftmailer:
 fos_user:
     db_driver: orm
     firewall_name: main
-    user_class: GravityCMS\CoreBundle\Entity\User
+    user_class: Gravity\CoreBundle\Entity\User
     model_manager_name: default
     group:
-        group_class: GravityCMS\CoreBundle\Entity\Group
+        group_class: Gravity\CoreBundle\Entity\Group
 
     from_email:
         address:        registration@andy-thorne.co.uk
@@ -135,7 +135,7 @@ cmf_routing:
     enabled: true
     route_provider_service_id: gravity_cms.routing.route_provider
 
-gravity_cms_core:
+gravity_core:
   entity_manager: default
   backend_type: orm
   default_editor: ckeditor
@@ -196,3 +196,58 @@ k_phoen_gaufrette_extras:
         public:                 # the filesystem name
             prefix:             # the resolver to use
                 path: /files    # and its configuration
+
+gravity_node:
+  content_types:
+    basic:
+      name: Basic Page
+      description: Flat HTML static page
+      fields:
+        tags:
+          type: tag
+          settings:
+            limit: null
+            multiple: true
+            allow_new: true
+            tag: 1
+          widget:
+            type: tag.autocomplete
+
+        lead_image:
+          type: image
+          settings: ~
+          widget:
+            type: image.image_browser
+            settings:
+              image_style: thumbnail
+
+        credit:
+          type: text
+          settings:
+            limit: 1
+          widget:
+            type: text.unformatted
+            settings:
+              multiline: false
+              default: Andy Thorne
+
+        price:
+          type: number
+          settings:
+            limit: 1
+          widget:
+            type: number.number_box
+            settings:
+              step: 0.5
+              min: 1
+              max: 5
+
+        body:
+          type: text
+          settings:
+            limit: 3
+            # ...
+          widget:
+            type: text.formatted
+            settings:
+              default: 'Default Text'

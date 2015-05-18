@@ -1,0 +1,21 @@
+basic:
+  name: Basic Page
+  description: Flat HTML static page
+  fields:
+    Tags:
+      type: tag
+      settings:
+        limit: null
+      widget:
+        type: tag.autocomplete
+
+    Body:
+      type: text
+      settings:
+        limit: 1
+        # ...
+      widget:
+        type: text.formatted
+        settings:
+          default: 'Default Text'
+

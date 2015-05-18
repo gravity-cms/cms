@@ -1,11 +1,17 @@
 {
-    "name": "symfony/framework-standard-edition",
+    "name": "gravity-cms/cms",
     "license": "MIT",
     "type": "project",
     "description": "The \"Symfony Standard Edition\" distribution",
     "autoload": {
         "psr-0": { "": "src/", "SymfonyStandard": "app/" }
     },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/gravity-cms/gravity"
+        }
+    ],
     "require": {
         "php": ">=5.3.3",
         "symfony/symfony": "2.6.*",
@@ -33,7 +39,9 @@
         "symfony-cmf/core-bundle": "~1.1",
         "liip/imagine-bundle": "~1.2",
         "knplabs/knp-gaufrette-bundle": "0.1.*",
-        "kphoen/gaufrette-extras-bundle": "~1.0"
+        "kphoen/gaufrette-extras-bundle": "~1.0",
+
+        "gravity-cms/gravity": "dev-master"
     },
     "require-dev": {
         "sensio/generator-bundle": "~2.3",
