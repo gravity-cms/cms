@@ -243,6 +243,24 @@ gravity_node:
           widget:
             type: number.number_box
 
+        signed_off:
+          type: boolean
+          settings:
+            limit: 1
+          widget:
+            type: boolean.checkbox
+
+        football_team:
+          type: choice
+          settings:
+            limit: 1
+            choices:
+              liverpool: Liverpool
+              none: I clearly don't like football
+          widget:
+            type: choice.select
+            settings: ~
+
         body:
           type: text
           settings:
